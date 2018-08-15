@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Sound from 'react-sound';
 
+import musicFile from '../../res/mindfulness.mp3';
+
 import classes from './ReactionLayer.css';
 
 class ReactionLayer extends Component {
@@ -18,7 +20,7 @@ class ReactionLayer extends Component {
                 isActive: Sound.status.PLAYING
             })
 
-            const durationPeriod = Math.random() * 10
+            const durationPeriod = Math.random() * 10;
 
             console.log('Ayo it works.');
         }
@@ -32,8 +34,8 @@ class ReactionLayer extends Component {
                 className={classes.ReactionLayer}
                 onClick={this.onClickHandler}>
                 <Sound 
-                    // url="../../res/mindfulness.mp3"
-                    url="https://s3.nofilecdn.io/g/zbhi2DrQUPcTKngGVFxxP4Kt5MEhwTe4kCRwtNj13NdCSPvI5VTEVz6xb85VW7W1/mindfulness.mp3/p"
+                    url={musicFile}
+                    // url="https://s3.nofilecdn.io/g/zbhi2DrQUPcTKngGVFxxP4Kt5MEhwTe4kCRwtNj13NdCSPvI5VTEVz6xb85VW7W1/mindfulness.mp3/p"
                     playStatus={this.state.isActive}
                     playFromPosition={0}
                 />
